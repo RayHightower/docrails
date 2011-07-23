@@ -56,7 +56,8 @@ platforms :ruby do
   gem "sqlite3", "~> 1.3.3"
 
   group :db do
-    gem "pg", ">= 0.11.0" unless ENV['TRAVIS'] # once pg is on travis this can be removed
+    # removed pg since RTH is not using postgres. pg failed to "bundle install" for unknown reasons.
+    # gem "pg", ">= 0.11.0" unless ENV['TRAVIS'] # once pg is on travis this can be removed
     gem "mysql", ">= 2.8.1"
     gem "mysql2", ">= 0.3.6"
   end
